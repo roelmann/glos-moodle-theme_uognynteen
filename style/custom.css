@@ -1,0 +1,12 @@
+/* code transferred to SCSS - maintining for testing only
+ * ======================================================*/
+
+.assesslist .assess.card {
+    margin:0;
+    padding:1.5em;
+}
+#slider2_blocksmodal .assesslinks {
+    padding: 1em 1.5em;
+}
+#page-footer .container {max-width:100%;}
+.col-md-auto.colpadding { flex: 2 0 auto; }

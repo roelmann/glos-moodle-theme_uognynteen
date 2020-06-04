@@ -1,0 +1,411 @@
+//--------------------------------------------------------------------------------
+// UOGNYNTEEN - main settings.
+// ---------------------------
+
+body.greyscale {filter: grayscale(90%);}
+body.invertedgreyscale {filter: grayscale(100%) invert(100%);}
+body.bonw {filter: grayscale(100%) brightness(80%) contrast(200%);}
+body.invertedbonw {filter: grayscale(100%) brightness(80%) contrast(200%) invert(100%);}
+
+[data-region="drawer"] {
+    background-color: $dark;
+}
+header#page-header {
+    & .card {
+        background-size: contain;
+        & .cardwrapper {
+            background:url([[pix:theme|GlosLearningOnlineSystems_small]]) no-repeat top right;
+            margin-top: 1rem;
+            margin-right: 1rem;
+        }
+        & .card-body {
+            padding: 0 0 1.25rem 1.25rem;
+        }
+    }
+    & .page-header-headings h1 {
+        padding-right:210px;
+    }
+    & .col-12 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+#region-main-settings-menu {
+    float:right;
+}
+.userpicture {
+        border-radius: 50%;
+        border: 2px solid $white;
+    }
+.navbar {
+    & .navbar-brand {
+        display:none !important;
+    }
+    & a, a .icon, .nav-link {
+        font-size: 85%;
+    }
+    & a.dropdown-item {
+        font-size: 85%;
+    }
+}
+#nav-drawer nav {
+    font-size: 85%;
+}
+.page-context-header .page-header-image {
+    margin-right: 1em;
+    margin-bottom: 0;
+}
+
+#region-main {
+    padding: 0;
+    aside section.block {
+        .card-body {
+            padding-bottom: 0 !important;
+        }
+    }
+}
+
+#page-my-index.pagelayout-mydashboard #region-main #block-region-side-post {
+    width: 28%;
+    float: right;
+}
+#page-my-index.pagelayout-mydashboard .has-dash-post div[role="main"] {
+    width: 70%;
+    margin-right: 2%;
+    float: left;
+}
+
+
+
+// UOGNYNTEEN - feature settings.
+// ------------------------------
+// Top region.
+aside#block-region-side-top {
+    display:flex;
+    flex-direction:row;
+    & section.block {
+        flex: 1 1 25%;
+    }
+}
+// Hiding content presemester
+.contenthiddenmessage {
+    width: 100%;
+    display: none;
+    & h5 {
+        color: $white;
+    }
+}
+.staffview .contenthiddenmessage.alert {
+    display:block;
+}
+
+.hiddenpresemester {
+    & .contenthiddenmessage.alert {
+        display:block;
+    }
+    & #region-main-box,
+    & #nav-drawer {
+        display:none;
+    }
+}
+
+// EMA - Hiding Assessment Form items.
+.form-group.row.fitem[data-groupname="allowsubmissionsfromdate"] {display:flex;}
+.form-group.row.fitem[data-groupname="cutoffdate"] {display:flex;}
+.form-group.row.fitem[data-groupname="gradingduedate"] {display:flex;}
+#id_submissionsettings {display:none;}
+#id_notifications {display:none;}
+#id_modstandardgrade .form-group.row.fitem:nth-of-type(5) {display:none;}
+#id_modstandardgrade .form-group.row.fitem:nth-of-type(6) {display:none;}
+
+#id_availability .fdate_time_selector label.form-check.fitem {display:flex;}
+
+.submissionsummarytable .gradingstatus {display:none;}
+.submissionsummarytable .attemptnumber {display:none;}
+.feedbacktable .fbgradedate {display:none;}
+.feedbacktable .fbgrader {display:none;}
+
+#page-mod-assign-grader
+.assignsubmission_assessmentflags {display:none;}
+#page-mod-assign-grader
+.assignsubmission_examboardapproved {display:none;}
+#page-mod-assign-grader
+.assignsubmission_gradereviews {display:none;}
+
+.gradingtable .allowsubmissionsfromdate {display:none;}
+.gradingtable a[title='Hide Allow submissions from'] {display:none;}
+.gradingtable a[href *='allowsubmissionsfromdate'] {display:none;}
+
+input[name=submissionstatement] {
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+}
+
+i[title="Required"].fa-exclamation-circle:before {
+    font-size:150%;
+    font-weight:600;
+    content:"*";
+}
+#id_groupsubmissionsettings .fcontainer:before{
+    content: "If you are using Group Submissions, please contact LTS for support.";
+}
+
+.assesslist ul li a {color:$danger}
+#page-mod-assign-grading .donotadjust{display:none;}
+.tii_links_container .warning {display:none;}
+
+.user-grade tbody tr:last-of-type {display:none;}
+.user-grade .column-contributiontocoursetotal {display:none;}
+.user-grade .column-weight {display:none;}
+
+#page-report-myfeedback-index a[title="Departmental admin dashboard"] {display:none;}
+#page-report-myfeedback-index a[title="Usage dashboard"] {display:none;}
+#page-report-myfeedback-index a[title="My students"] {display:none;}
+
+
+// Blocks Modal.
+.path-course .context-header-settings-menu {
+    display: none;
+}
+.blockmodalbuttons {
+    width: 50px;
+    top:100px;
+    right: 0;
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: stretch;
+
+    button.pageblockbtn {
+        margin-bottom: 10px;
+        order: 0;
+        flex: 1 1 auto;
+        align-self: auto;
+        opacity: 0.8;
+        border:1px solid $white;
+    }
+}
+
+section#slider1_blocksmodal {
+    width: 100%;
+    height: 100%;
+}
+
+.blocksmodal.modal-dialog {
+    margin: 5% 7.5%;
+    max-width: 100%; /* Override core modal-dialogue max width setting. */
+    width: 85%;
+    .modal-body .block-region {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: stretch;
+        align-items: stretch;
+
+        .block {
+            order: 0;
+            flex: 1 1 auto;
+            align-self: auto;
+            margin: 0 5px;
+        }
+    }
+}
+.modalcards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: stretch;
+
+    .card {
+        order: 1;
+        flex: 1 1 auto;
+        align-self: auto;
+        margin: 0 5px;
+
+        &.bg-secondary.small {
+            background-color: $gray-300 !important;
+        }
+    }
+    .card-block {
+        margin-left: 1rem;
+    }
+    .staffmember {
+        img {
+            float: left;
+        }
+        .staffinfo {
+            margin-left: 85px;
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.modalcards_progress {
+    max-width: 100px;
+    flex: 1 0 auto;
+    border: none;
+    .progress-chart-container,
+    p,
+    i {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+#slider2_blocksmodal,
+#slider3_blocksmodal,
+#slider4_blocksmodal {
+    width:100%;
+    margin: 0;
+    padding:0 !important;
+    .modal-dialog.blocksmodal {
+        top: 0;
+        right: 0;
+        margin:0 0 0 auto;
+        width: 350px;
+        height: 100vh;
+        background-color: rgba($primary, .5);
+        .modal-header button{
+            margin:0 0 0 auto;
+        }
+        .modal-title {
+            display:none;
+        }
+        .modal-body .block-region {
+            flex-direction: column;
+        }
+    }
+}
+
+
+// Various
+footer nav.navbar-nav {
+    display:none;
+}
+.format-topcoll .ctopics.row-fluid {
+    display:block;
+}
+div[data-flexitour = 'step-background'] {
+    background-color:rgba(255,255,0,0.4) !important;
+}
+
+.course-content ul.topics li.section .summary,
+.course-content ul.weeks li.section .summary,
+.course-content ul.topics li.section .content > .availabilityinfo,
+.course-content ul.weeks li.section .content > .availabilityinfo {
+    margin-left: 0.75rem;
+}
+#page-course-management .list-group-item {
+    padding: 0;
+}
+.section .activity .availabilityinfo {
+    margin-top: -0.5em;
+    margin-bottom: 0.5em;
+}
+.que .formulation, .que .outcome, .que .comment {color: $body-color;}
+.qnbutton.free.btn-secondary {color:$body-color;}
+
+// UOGNYNTEEN - plugin overrides.
+// ------------------------------
+// block links - Support Blocks and Module Guide.
+.blocklink {
+    background-image: radial-gradient(ellipse at center,rgba(255,255,255,.3),rgba(0,0,0,0)) !important;
+}
+.blocklink:nth-of-type(6n), .blocklink:nth-of-type(1) {background-color:$primary;}
+.blocklink:nth-of-type(6n+1), .blocklink:nth-of-type(2) {background-color:$secondary;}
+.blocklink:nth-of-type(6n+2), .blocklink:nth-of-type(3) {background-color:$uogcoral;}
+.blocklink:nth-of-type(6n+3), .blocklink:nth-of-type(4) {background-color:$uogdarkblue;}
+.blocklink:nth-of-type(6n+4), .blocklink:nth-of-type(5) {background-color:$uogorange;}
+.blocklink:nth-of-type(6n+5) {background-color:$uogred;}
+
+.block_supportlinks:nth-of-type(6n)  .supportblocktext, .block_supportlinks:nth-of-type(1)  .supportblocktext {background-color:$primary}
+.block_supportlinks:nth-of-type(6n+1) .supportblocktext, .block_supportlinks:nth-of-type(2)  .supportblocktext {background-color:$secondary}
+.block_supportlinks:nth-of-type(6n+2) .supportblocktext, .block_supportlinks:nth-of-type(3)  .supportblocktext {background-color:$uogcoral}
+.block_supportlinks:nth-of-type(6n+3) .supportblocktext, .block_supportlinks:nth-of-type(4)  .supportblocktext {background-color:$uogdarkblue}
+.block_supportlinks:nth-of-type(6n+4) .supportblocktext, .block_supportlinks:nth-of-type(5)  .supportblocktext {background-color:$uogorange}
+.block_supportlinks:nth-of-type(6n+5) .supportblocktext {background-color:$uogred}
+.courselinktext {background-color: $primary;}
+.block_moduleguide .moduleguidetext {background-color: $uogred;}
+
+// ModGuideForm
+#block-region-side-sliderone {display:none;}
+.block_modguideform, .block_asp {display:none;}
+#slider1_blocksmodal #block-region-side-sliderone,
+#slider1_blocksmodal #block-region-side-sliderone .block_modguideform,
+#slider1_blocksmodal #block-region-side-sliderone .block_asp {display:flex;}
+.path-mod-assign.pagelayout-admin .block_asp {display:flex;}
+
+
+// Talis Aspire.
+rl-navbar nav.navbar {display:none !important;}
+
+
+// Resonsive adjustments.
+@media (max-width: 768px) {
+    aside#block-region-side-top {
+        flex-direction:column;
+    }
+    #region-main {
+        .card {
+            .card-body {
+                padding-left:0;
+                padding-right:0;
+                .course-content {
+                    ul {
+                        margin-left:0;
+                        margin-right:0;
+                    }
+                    p {
+                        font-size: 0.85rem;
+                    }
+                    h1 {
+                        font-size: 200%;
+                    }
+                    h2 {
+                        font-size: 150%;
+                    }
+                    h3 {
+                        font-size: 120%;
+                    }
+                    h4, h5 {
+                        font-size: 100%;
+                    }
+                }
+            }
+        }
+    }
+    #page-my-index.pagelayout-mydashboard #region-main #block-region-side-post {
+        width: 100%;
+    }
+    #page-my-index.pagelayout-mydashboard #region-main div[role="main"] {
+        width: 100%;
+        margin-right: 0;
+    }
+    header#page-header {
+        & .card {
+            & .cardwrapper {
+                background:url([[pix:theme|GlosLearningOnlineSystems_navbar]]) no-repeat top right;
+            }
+        }
+        & .page-header-headings h1 {
+            font-size:2rem;
+            padding-right:0;
+        }
+        & .page-header-image img {
+            width:50px;
+            height:50px;
+        }
+    }
+}
+
+.page-context-header .header-button-group {display:none;}
